@@ -1,0 +1,128 @@
+.form-tab {
+  padding: 1rem;
+  position: relative;
+}
+
+.tab-layout {
+  display: flex;
+  position: relative;
+  width: 100%;
+}
+
+/* Position the navigation panel absolutely */
+.navigation-panel {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  width: 250px;
+  transition: width 0.3s ease;
+}
+
+.navigation-panel.collapsed {
+  width: 40px;
+}
+
+.content-area {
+  flex: 1;
+  margin-left: 250px; /* Initial margin equal to navigation width */
+  transition: margin-left 0.3s ease;
+}
+
+/* When nav is collapsed, reduce the margin */
+.navigation-panel.collapsed ~ .content-area {
+  margin-left: 40px;
+}
+
+@media (max-width: 1024px) {
+  .navigation-panel {
+    position: relative;
+    width: 100%;
+  }
+  
+  .content-area {
+    margin-left: 0;
+  }
+  
+  .navigation-panel.collapsed ~ .content-area {
+    margin-left: 0;
+  }
+}
+
+.section-container {
+  padding: 1.5rem;
+  border: 1px solid var(--border-color);
+  border-radius: 8px;
+  background-color: var(--background-color);
+  position: relative;
+}
+
+.section-actions {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  padding: 1rem 0;
+}
+
+.section-actions:first-child {
+  position: absolute;
+  top: -50px;
+  right: 0;
+  padding: 0;
+}
+
+.section-actions:last-child {
+  margin-top: 1rem;
+  border-top: 1px solid var(--border-color);
+}
+
+.section-actions button {
+  min-width: 120px;
+}
+
+.section-actions button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+/* Add these styles to your existing CSS */
+.hero-icon {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.about-icon {
+  color: var(--primary-color);
+  margin-right: 1rem;
+}
+
+.hero-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.about-header {
+  display: flex;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.subtitle {
+  color: var(--text-muted);
+  font-size: 1.2rem;
+  margin-top: 0.5rem;
+}
+
+.navbar-wrapper {
+  background-color: #f8f9fa;
+  position: relative;
+}
+
+.toggle-button {
+  background: #ffffff;
+  border: 1px solid #ddd;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}

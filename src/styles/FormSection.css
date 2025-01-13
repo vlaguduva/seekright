@@ -1,0 +1,204 @@
+body {
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.form-control[type="date"] {
+  padding: 0.6rem 0.75rem;
+  cursor: pointer;
+}
+
+.form-control[type="number"] {
+  -moz-appearance: textfield;
+}
+
+.form-control[type="number"]::-webkit-outer-spin-button,
+.form-control[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Optional: Add custom spinners */
+.form-control[type="number"] {
+  position: relative;
+}
+
+.form-control[type="number"]:hover {
+  -moz-appearance: number-input;
+}
+
+/* Add units or currency if needed */
+.form-group.has-unit .form-control {
+  padding-right: 3rem;
+}
+
+.form-group.has-unit::after {
+  content: attr(data-unit);
+  position: absolute;
+  right: 1rem;
+  top: 50%;
+  transform: translateY(-50%);
+  color: var(--text-secondary);
+  pointer-events: none;
+}
+
+.nested-field {
+  margin-top: 1rem;
+  padding-left: 1rem;
+  border-left: 2px solid var(--border-color);
+} 
+
+.radio-group {
+  display: flex;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+  background-color: var(--background-color);
+}
+
+.radio-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.radio-input {
+  margin-right: 0.5rem;
+  cursor: pointer;
+  width: 1.125rem;
+  height: 1.125rem;
+  background-color: var(--background-color);
+}
+
+.radio-text {
+  font-size: 1rem;
+  color: var(--text-primary);
+}
+
+.form-label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  color: var(--text-primary);
+} 
+
+.checkbox-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 0.5rem;
+}
+
+.checkbox-label {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  user-select: none;
+}
+
+.checkbox-input {
+  margin-right: 0.5rem;
+  cursor: pointer;
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+.checkbox-text {
+  font-size: 1rem;
+  color: var(--text-primary);
+} 
+
+/* Custom tooltip styles */
+:root {
+  --tooltip-background-color: rgba(0, 0, 0, 0.8);
+  --tooltip-text-color: white;
+}
+
+/* Style the tooltip */
+.react-tooltip {
+  background-color: var(--tooltip-background-color) !important;
+  color: var(--tooltip-text-color) !important;
+  padding: 8px 12px !important;
+  border-radius: 4px !important;
+  font-size: 14px !important;
+  max-width: 200px !important;
+}
+
+/* Add a cursor pointer to labels with tooltips */
+label[data-tooltip-id] {
+  cursor: help;
+} 
+
+
+.form-control {
+  background-color: var(--background-color);
+
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+}
+
+.form-group {
+  margin-bottom: 1rem;
+  background-color: var(--background-color);
+}
+
+.error {
+  color: red;
+}
+
+.section-container {
+  margin-bottom: 2rem;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+}
+
+
+.form-section {
+  padding: 1rem;
+}
+
+.fields-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+}
+
+.field-wrapper {
+  min-width: 0;
+}
+
+.form-group {
+  margin-bottom: 1rem;
+}
+
+.form-group label {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #495057;
+  background-color: #fff;
+  border: 1px solid #ced4da;
+  border-radius: 0.25rem;
+  transition: border-color 0.15s ease-in-out;
+}
+
+.form-control:focus {
+  border-color: var(--primary-color);
+  outline: 0;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+@media (max-width: 768px) {
+  .fields-grid {
+    grid-template-columns: 1fr;
+  }
+}

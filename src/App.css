@@ -1,0 +1,197 @@
+.App {
+  text-align: center;
+}
+
+.App-logo {
+  height: 40vmin;
+  pointer-events: none;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .App-logo {
+    animation: App-logo-spin infinite 20s linear;
+  }
+}
+
+.App-header {
+  background-color: var(--background-color);
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  font-size: calc(10px + 2vmin);
+  color: white;
+}
+
+.App-link {
+  color: #61dafb;
+}
+
+@keyframes App-logo-spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+
+body {
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen,
+    Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+  color: var(--text-color);
+  line-height: 1.6;
+  background-color: var(--background-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.dark-mode {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.light-mode {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Footer Styles */
+.footer {
+  background-color: var(--background-color);
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+}
+
+/* 404 Page Styles */
+.not-found {
+  text-align: center;
+  padding: 4rem 2rem;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.not-found h1 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.not-found p {
+  color: var(--text-color);
+  font-size: 1.1rem;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1rem;
+  }
+  
+  .footer {
+    padding: 1rem;
+  }
+}
+
+/* Loading State */
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 200px;
+}
+
+.loading::after {
+  content: '';
+  width: 2rem;
+  height: 2rem;
+  border: 3px solid #f3f3f3;
+  border-top: 3px solid var(--primary-color);
+  border-radius: 50%;
+  animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* App-wide styles for dark and light modes */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh; /* Ensure the app takes at least the full height of the viewport */
+}
+
+.main-content {
+  flex: 1; /* Allow the main content to grow and fill the available space */
+  padding: 2rem;
+  transition: background-color 0.3s, color 0.3s; /* Smooth transition for background and text color */
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.footer {
+  background-color: var(--background-color);
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
+  color: var(--text-color);
+}
+
+/* App-wide styles for dark and light modes */
+.app-dark {
+  background-color: #121212;
+  color: #ffffff;
+}
+
+.app-light {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+/* Dark mode for the Container component */
+.container-dark {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Light mode for the Container component */
+.container-light {
+  background-color: #f8f9fa;
+  color: #000000;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Dark mode styles for main-content */
+.app-dark .main-content {
+  background-color: #1e1e1e; /* Dark background */
+  color: #ffffff; /* Light text color */
+}
+
+/* Light mode styles for main-content */
+.app-light .main-content {
+  background-color: #ffffff; /* Light background */
+  color: #000000; /* Dark text color */
+}

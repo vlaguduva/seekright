@@ -1,0 +1,39 @@
+.questionnaire-status {
+  padding: 0.5rem;
+  border-radius: 4px;
+  background-color: var(--light-bg);
+}
+
+.review-section {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.review-section h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.review-section pre {
+  background-color: var(--light-bg);
+  padding: 1rem;
+  border-radius: 4px;
+  max-height: 400px;
+  overflow-y: auto;
+}
+
+.modal-body {
+  max-height: 70vh;
+  overflow-y: auto;
+}
+
+.nav-tabs {
+  display: flex;
+  flex-direction: row;
+}
+
+.tab {
+  margin-right: 1rem;
+  padding: 0 0 0 0;
+}

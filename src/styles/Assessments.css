@@ -1,0 +1,101 @@
+.assessment {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  padding: 1rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+  font-family: Arial, sans-serif;
+}
+
+.assessment table {
+  width: 80%;
+  max-width: 800px;
+  border-collapse: collapse;
+  margin-top: 1rem;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.assessment th, .assessment td {
+  border: 1px solid var(--border-color);
+  padding: 0.5rem;
+  text-align: left;
+}
+
+.assessment button {
+  background-color: var(--input-background);
+  color: var(--text-color);
+  border: 1px solid var(--border-color);
+  padding: 0.5rem 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+  margin-top: 1rem;
+}
+
+.assessment button:hover {
+  background-color: var(--border-color);
+  color: var(--text-color);
+}
+
+.new-assessment .tabs {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.new-assessment .tabs button {
+  flex: 1;
+  padding: 0.5rem;
+  cursor: pointer;
+  background-color: var(--background-color);
+  color: var(--input-text-color);
+  border: 1px solid var(--border-color);
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.new-assessment .tabs button.active {
+  background-color: var(--border-color);
+  color: var(--text-color);
+}
+
+.tab-content {
+  width: 80%;
+  max-width: 800px;
+  padding: 1rem;
+  border: 1px solid var(--border-color);
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+.form-control {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--text-color);
+  background-color: var(--input-background);
+}
+
+.form-control:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 2px rgba(59, 130, 246, 0.1);
+} 
+/* Dark mode for the Container component */
+.container-dark {
+  background-color: #1e1e1e;
+  color: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+}
+
+/* Light mode for the Container component */
+.container-light {
+  background-color: #f8f9fa;
+  color: #000000;
+  padding: 20px;
+  border-radius: 8px;
+}

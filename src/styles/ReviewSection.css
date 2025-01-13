@@ -1,0 +1,85 @@
+.review-container {
+  padding: 2rem;
+  background-color: var(--bg-primary);
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.review-section {
+  margin-bottom: 2rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid var(--border-color);
+}
+
+.review-section h3 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.review-fields {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1rem;
+}
+
+.review-field {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem;
+  background-color: var(--bg-secondary);
+  border-radius: 4px;
+}
+
+.field-label {
+  font-weight: 500;
+  color: var(--text-color);
+  text-transform: capitalize;
+}
+
+.field-value {
+  color: var(--text-secondary);
+}
+
+.edit-btn {
+  margin-top: 1rem;
+  padding: 0.5rem 1rem;
+  background-color: var(--bg-secondary);
+  border: 1px solid var(--border-color);
+  border-radius: 4px;
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.edit-btn:hover {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+.review-notes {
+  margin-top: 2rem;
+  padding: 1rem;
+  background-color: var(--bg-secondary);
+  border-radius: 4px;
+}
+
+.review-notes h3 {
+  color: var(--text-color);
+  margin-bottom: 0.5rem;
+}
+
+.review-notes p {
+  color: var(--text-secondary);
+  white-space: pre-wrap;
+}
+
+@media (max-width: 768px) {
+  .review-fields {
+    grid-template-columns: 1fr;
+  }
+  
+  .review-field {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+} 
